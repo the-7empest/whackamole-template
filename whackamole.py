@@ -19,21 +19,21 @@ def main():
     screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
     clock = pygame.time.Clock()
     mole_image = pygame.image.load("mole.png");running = True
-     while running:
-          for event in pygame.event.get():
-               if event.type == pygame.QUIT:
-                    running = False
-               elif event.type == pygame.MOUSEBUTTONDOWN:
-                    if event.button == 1:  # Left mouse button
-                        mouse_x, mouse_y = event.pos
-                        mole_x, mole_y = mole_position
-                    if mole_x <= mouse_x < mole_x + SQUARE_SIZE and mole_y <= mouse_y < mole_y + SQUARE_SIZE:
-                        mole_position = random_position()
-          screen.fill("light green")
-          draw_grid(screen)
-          screen.blit(mole_image, mole_image.get_rect(topleft=mole_position))
-          pygame.display.flip()
-          clock.tick(60)
-      pygame.quit()
+    while running:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                if event.button == 1:  # Left mouse button
+                    mouse_x, mouse_y = event.pos
+                    mole_x, mole_y = mole_position
+                if mole_x <= mouse_x < mole_x + SQUARE_SIZE and mole_y <= mouse_y < mole_y + SQUARE_SIZE:
+                    mole_position = random_position()
+        screen.fill("light green")
+        draw_grid(screen)
+        screen.blit(mole_image, mole_image.get_rect(topleft=mole_position))
+        pygame.display.flip()
+        clock.tick(60)
+    pygame.quit()
 if __name__ == "__main__":
     main()

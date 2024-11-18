@@ -14,7 +14,7 @@ def random_position():
     return grid_x, grid_y
 def main():
     pygame.init()
-     mole_position = (0, 0)
+    mole_position = (0, 0)
         # You can draw the mole with this snippet:
         # screen.blit(mole_image, mole_image.get_rect(topleft=(x,y)))
     screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))

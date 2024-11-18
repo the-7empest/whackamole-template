@@ -18,8 +18,7 @@ def main():
         # screen.blit(mole_image, mole_image.get_rect(topleft=(x,y)))
     screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
     clock = pygame.time.Clock()
-    mole_image = pygame.image.load("mole.png")
-     running = True
+    mole_image = pygame.image.load("mole.png");running = True
      while running:
           for event in pygame.event.get():
                if event.type == pygame.QUIT:

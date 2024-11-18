@@ -5,9 +5,9 @@ SQUARE_SIZE = 32
 WINDOW_WIDTH, WINDOW_HEIGHT = GRID_WIDTH * SQUARE_SIZE, GRID_HEIGHT * SQUARE_SIZE
 def draw_grid(screen):
      for x in range(0, WINDOW_WIDTH, SQUARE_SIZE):
-        pygame.draw.line(screen, "black", (x, 0), (x, WINDOW_HEIGHT))
+          pygame.draw.line(screen, "black", (x, 0), (x, WINDOW_HEIGHT))
      for y in range(0, WINDOW_HEIGHT, SQUARE_SIZE):
-        pygame.draw.line(screen, "black", (0, y), (WINDOW_WIDTH, y))
+          pygame.draw.line(screen, "black", (0, y), (WINDOW_WIDTH, y))
 def random_position():
     grid_x = random.randrange(0, GRID_WIDTH) * SQUARE_SIZE
     grid_y = random.randrange(0, GRID_HEIGHT) * SQUARE_SIZE
